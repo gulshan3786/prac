@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMajax</title>
+    <style>
+        .form {
+          margin: 0px, auto;
+        }
+  
+        input {
+          margin-bottom: 16px;
+        }
+        .error-message {
+          color: red;
+          margin-top: 4px;
+        }
+        .tb1 {
+          background-color: seashell;
+          align-items: center;
+          align-content: center;
+        }
+        .dt1 {
+          padding-bottom: 15px;
+  
+          font-size: 20px;
+          display: inline;
+          padding-right: 10px;
+          padding-top: 50px;
+          margin-bottom: 30px;
+        }
+        
+        .tb2 {
+          background-color: lightcyan;
+          padding-bottom: 30px;
+          width: 100%;
+        
+        }
+        .fl{
+          display: flex;
+          flex-direction: row;
+        }
+        .dt2 {
+          padding-bottom: 15px;
+  
+          font-size: 20px;
+          display: inline;
+          padding-right: 10px;
+          padding-top: 50px;
+        }
+        .tp {
+          margin-top: 30px;
+        }
+        .tb3{
+            background-color: rgba(87, 88, 88, 0.11);
+           padding-bottom: 30px;
+            width: 100%;
+          }
+          .tb9{
+              display:flex;
+              gap: 10px;
+              width: 1200px;
+              height: 250px;
+              margin:10px;
+              padding-right: 15px;
+              
+          }
+          .tb4{
+              background-color: rgb(153, 148, 134);
+              
+            min-width: 400px;
+          }
+          .tb5{
+              background-color: rgba(188, 194, 160, 0.678);
+            min-width: 600px;
+          }
+  
+          .tb6{
+              background-color: rgba(118, 121, 108, 0.678);
+          min-width: 600px;
+          }
+          .tb7{
+              
+              background-color: rgba(118, 121, 108, 0.678);
+           min-width: 500px;
+          
+          }
+          .tb11{
+              display:flex;
+              gap: 10px;
+              width: 1200px;
+            
+            
+          }
+          .button1{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-left: 50px;
+            align-items: center;
+            gap: 50px;
+            
+        
+          }
+
+        input[type=button]{
+          background-color: #04AA6D;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 30px;
+
+    }
+    .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="button1">
+    <input type="button" onclick="previousSection()" value="previous">
+    <input type="button" onclick="nextSection()" value="next">
+   
+
+  </div>
+  <div class="bc1">
+        <form id="form">
+      <div  id="basicDetails" class="form-section active">
+        <div class="tb1" >
+          <h2>Basic details</h2>
+        
+           <div class="tp">
+             <div class="dt1">
+               <label for="fname">First Name</label>
+               <input type="text" id="fname" name="fname" />
+               <span class="error-message" id="fnameError"></span>
+             </div>
+             <div class="dt2">
+               <label for="lname">Last Name</label>
+               <input type="text" id="lname" name="lname" />
+               <span class="error-message" id="lnameError"></span>
+             </div>
+           </div>
+   
+           <div class="tp">
+             <div class="dt1">
+               <label for="desig">Designation</label>
+               <input type="text" id="desig" name="desig" />
+               <span class="error-message" id="desigError"></span>
+             </div>
+             <div class="dt2">
+               <label for="add1">Address</label>
+               <input type="text" id="add" name="add" />
+               <span class="error-message" id="add1Error"></span>
+             </div>
+           </div>
+           <div class="tp">
+             <div class="dt1">
+               <label for="email">Email</label>
+               <input type="varchar" id="email" name="email" />
+               <span class="error-message" id="emailError"></span>
+             </div>
+             <div class="dt2">
+               <label for="pincode">Pincode</label>
+               <input type="text" id="pin" name="pin" />
+               <span class="error-message" id="pinError"></span>
+             </div>
+           </div>
+           <div class="tp">
+             <div class="dt1">
+               <label for="phone ">Phone no</label>
+               <input type="varchar" id="phone" name="phone" />
+               <span class="error-message" id="PhoneError"></span>
+             </div>
+             <div class="dt2">
+               <label for="city">City</label>
+               <input type="text" id="city" name="city" />
+               <span class="error-message" id="cityError"></span>
+             </div>
+           </div>
+           <div class="tp">
+             <div class="dt1">
+               <label for="gender">Gender</label>
+   
+               <label>Male</label>
+               <input type="radio" id="male" name="gender" value="Male" />
+   
+               <label>Female</label>
+               <input type="radio" id="female" name="gender" value="Female" />
+               <span
+                 clas="error-message"
+                 id="genderError"
+                 style="color: red"
+               ></span>
+             </div>
+             &nbsp;&nbsp;&nbsp;
+             <div class="dt1" style="margin: right 30px">
+               <label for="state">State</label>
+               <select name="state" id="state">
+                 <option disabled selected value>-- select an option --</option>
+                 <option value="Gujarat">Gujarat</option>
+                 <option value="UP">Uttarpradesh</option>
+                 <option value="MP">Madhyapradessh</option>
+                 <option value="HP">HimachalPradesh</option>
+                 <option value="Delhi">Delhi</option>
+                 <option value="Punjab">Punjab</option>
+                 <option value="Orrissa">Orrissa</option>
+               </select>
+               <span
+                 clas="error-message"
+                 id="stateError"
+                 style="color: red"
+               ></span>
+             </div>
+             <div class="tp">
+               <div class="dt1">
+                 <label for="relationshipstatus">Relationshipstatus</label>
+                 <select name="rel_status" id="rel_status">
+                   <option disabled selected value>-- select an option --</option>
+                   <option value="single">Single</option>
+                   <option value="divorced">Divorced</option>
+                   <option value="married">Married</option>
+                 </select>
+                 <span
+                   clas="error-message"
+                   id="stateError"
+                   style="color: red"
+                 ></span>
+               </div>
+               &nbsp;&nbsp;
+               <div class="dt2">
+                 <label for="dob">DateofBirth</label>
+                 <input type="varchar" id="dob" name="dob" />
+                 <span
+                   clas="error-message"
+                   id="stateError"
+                   style="color: red"
+                 ></span>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+      <div  id="educationDetails" class="form-section">
+         <div class="tb2">
+            <h2>Education Details</h2>
+              
+               <div class="fl">
+                 <div class="dt">
+                   <legend>Ssc result</legend>
+   
+                   <label>Name of board</label>
+                   <input type="text" id="sboard" name="board" />
+                   <span class="error-message" id="ssceducationError"></span>
+                 </div>
+                 <div class="dt">
+                   <label>Passing year</label>
+                   <input type="text" id="spy" name="passingyear" />
+                   <p class="ssc_py"></p>
+                 </div>
+   
+                 <div class="dt">
+                   <label for="percentage">Percentage</label>
+                   <input type="text" id="sper" name="per" />
+                   <p class="ssc_per"></p>
+                 </div>
+               </div>
+               <br />
+               <div class="fl">
+                 <div class="dt">
+                   <legend>hsc result</legend>
+   
+                   <label>Name of board</label>
+                   <input type="text" id="hboard" name="board" />
+                   <span class="error-message" id="hsceducationError"></span>
+   
+                 </div>
+                 <div class="dt">
+                   <label>Passing year</label>
+                   <input type="text" id="hpy" name="passingyear" />
+                 </div>
+   
+                 <div class="dt">
+                   <label for="percentage">Percentage</label>
+                   <input type="text" id="hper" name="per" />
+                 </div>
+               </div>
+               <br />
+               <br />
+               <div class="fl">
+                 <div class="dt">
+                   <legend>bachelor degree</legend>
+   
+                   <label for="course">Course Name</label>
+                   <input type="text" id="bc" name="board" />
+                   <span class="error-message" id="bceducationError"></span>
+                 </div>
+                 <!-- <div class="dt">
+                             <label for="university">University</label>
+                             <input type="text" id="uni1" name="uni1">
+                         </div> -->
+                 <div class="dt">
+                   <label>Passing year</label>
+                   <input type="text" id="bpy" name="passingyear" />
+                 </div>
+                 <div class="dt">
+                   <label for="percentage">Percentage</label>
+                   <input type="text" id="bper" name="per" />
+                 </div>
+               </div>
+               <br />
+               <div class="fl">
+                 <div class="dt">
+                   <legend>Mater degeree</legend>
+   
+                   <label for="course">Course Name</label>
+                   <input type="text" id="mc" name="board" />
+                   <span class="error-message" id="mceducationError"></span>
+                 </div>
+                 <!-- <div class="dt">
+                             <label for="university">University</label>
+                             <input type="text" id="uni2" name="uni2">
+                         </div> -->
+                 <div class="dt">
+                   <label>Passing year</label>
+                   <input type="text" id="mpy" name="passingyear" />
+                 </div>
+                 <div class="dt">
+                   <label for="percentage">Percentage</label>
+                   <input type="text" id="mper" name="per" />
+                 </div>
+               </div>
+         
+              
+         </div>
+        </div>
+      <div id="workExperience"class="form-section">
+         <div class="tb3">
+           <h2>Work Experience</h2>
+            <div class="fl">
+                <div class="dt">
+                    <label>Company Name</label>
+                    <input type="text" id="comp1" name="comp">
+                    <span class="error-message" id="comp1Error"></span>
+                </div>
+                <div class="dt">
+                    <label>Designation</label>
+                <input type="text" id="desig1" name="designation">
+                </div>
+                <div class="dt">
+                    <label>from</label>
+                    <input type="text" id="frm_date1" name="frm_date">
+              
+                </div>
+                <div class="dt">
+                    <label>To</label>
+                <input type="text" id="to_date1" name="to">
+              
+                </div>
+               
+            </div>
+             <br>
+            <div class="fl">
+                <div class="dt">
+                    <label>Company Name</label>
+                    <input type="text" id="comp2" name="comp"/>
+                    <span class="error-message" id="comp2Error"></span>
+                </div>
+                <div class="dt">
+                    <label>Designation</label>
+                <input type="text" id="desig2" name="designation"/>
+                </div>
+                <div class="dt">
+                    <label>from</label>
+                    <input type="text" id="frm_date2" name="frm_date">
+              
+                </div>
+                <div class="dt">
+                    <label>To</label>
+                <input type="text" id="to_date2" name="to">
+              
+                </div>
+                <br>
+               
+            </div>
+             <div class="fl">
+                    <div class="dt">
+                        <label>Company Name</label>
+                        <input type="text" id="comp3" name="comp"/>
+                        <span class="error-message" id="comp3Error"></span>
+                    </div>
+                    <div class="dt">
+                        <label>Designation</label>
+                    <input type="text" id="desig3" name="designation">
+                    </div>
+                    <div class="dt">
+                        <label>from</label>
+                        <input type="text" id="frm_date3" name="frm_date">
+                  
+                    </div>
+                    <div class="dt">
+                        <label>To</label>
+                    <input type="text" id="to_date3" name="to">
+                  
+                    </div>
+              </div>
+            
+         
+          </div>
+        </div>
+           
+            
+        <div id="lang&tech" class="form-section">
+         <div class="tb9">
+           
+           <div class="tb4">
+               
+               <h2>language known</h2>
+                <div class="fl">
+                   <div class="dt">
+                       <input type="checkbox" id="hindi" name="language" value="hindi">
+                       <label>Hindi</label>
+                   </div>
+                   <div class="dt">
+                       <input type="checkbox" id="read1" name="hindi_know" value="read">
+                       <label>read</label>
+                   </div>
+                   <div class="dt">
+                       <input type="checkbox" id="write1" name="hindi_know" value="write">
+                       <label>write</label>
+                   </div>
+                   <div class="dt">
+                       <input type="checkbox" id="speak1" name="hindi_know" value="speak">
+                      <label>speak</label>
+                   </div>
+               </div>
+         <br>
+              <div class="fl">
+                <div class="dt">
+                <input type="checkbox" id="gujarati" name="language" value="gujarati">
+                <label>Gujarati</label>
+              </div>
+              <div class="dt">
+               <input type="checkbox" id="read2" name="gujarati_know" value="read">
+               <label>read</label>
+              </div>
+        <div class="dt">
+           <input type="checkbox" id="write2" name="gujarati_know" value="write">
+           <label>write</label>
+        </div>
+       <div class="dt">
+           <input type="checkbox" id="speak2" name="gujarati_know" value="speak">
+          <label>speak</label>
+       </div>
+       </div>
+       <br>
+       <div class="fl">
+       <div class="dt">
+           <input type="checkbox" id="english" name="language" value="english">
+           <label>English</label>
+       </div>
+       <div class="dt">
+           <input type="checkbox" id="read3" name="english_know" value="read">
+           <label>read</label>
+       </div>
+       <div class="dt">
+           <input type="checkbox" id="write3" name="english_know" value="write">
+           <label>write</label>
+       </div>
+       <div class="dt">
+           <input type="checkbox" id="speak3" name="english_know" value="speak">
+          <label>speak</label>
+       </div>
+       </div>
+   
+       
+       </div>
+      
+     
+       
+       
+      <div class="tb5">
+           
+               <h2>Technology Known</h2>
+                <div class="fl">
+                   <div class="dt">
+                       <input type="checkbox" id="php" name="technology" value="php">
+                       <label>php</label>
+                   </div>
+                   <div class="dt">
+                       <input type="radio" id="b0" name="php_level" value="beginner">
+                       <label>beginner</label>
+                   </div>
+                   <div class="dt">
+                       <input type="radio" id="m0" name="php_level" value="mediator">
+                       <label>Mediator</label>
+                   </div>
+                   <div class="dt">
+                       <input type="radio" id="e0" name="php_level" value="expert">
+                      <label>Expert</label>
+                   </div>
+               </div>
+       <br>
+       <div class="fl">
+       <div class="dt">
+           <input type="checkbox" id="oracle" name="technology" value="oracle">
+           <label>oracle</label>
+       </div>
+       <div class="dt">
+           <input type="radio" id="b1" name="oracle_level" value="beginner">
+           <label>beginner</label>
+       </div>
+       <div class="dt">
+           <input type="radio" id="m1" name="oracle_level" value="mediator">
+           <label>Mediator</label>
+       </div>
+       <div class="dt">
+           <input type="radio" id="e1" name="oracle_level" value="expert">
+          <label>Expert</label>
+       </div>
+       </div>
+       <br>
+       <div class="fl">
+       <div class="dt">
+           <input type="checkbox" id="mysql" name="technology" value="mysql">
+           <label>mysql</label>
+       </div>
+       <div class="dt">
+           <input type="radio" id="b2" name="mysql_level" value="beginner">
+           <label>beginner</label>
+       </div>
+       <div class="dt">
+           <input type="radio" id="m2" name="mysql_level"value="mediator">
+           <label>Mediator</label>
+       </div>
+       <div class="dt">
+           <input type="radio" id="e2" name="mysql_level" value="expert">
+          <label>Expert</label>
+       </div>
+       </div>
+       <br>
+       <div class="fl">
+       <div class="dt">
+          <input type="checkbox" id="laravel" name="technology" value="laravel">
+          <label>laravel</label>
+       </div>
+       <div class="dt">
+          <input type="radio" id="b3" name="laravel_level" value="beginner">
+          <label>beginner</label>
+       </div>
+       <div class="dt">
+          <input type="radio" id="m3" name="laravel_level" value="mediator">
+          <label>Mediator</label>
+       </div>
+       <div class="dt">
+          <input type="radio" id="e3" name="laravel_level" value="expert">
+         <label>Expert</label>
+       </div>
+       </div>
+       
+       </div>
+       
+       
+       </div>
+       
+    
+    </div>
+     <div id="ref&pref" class="form-section">
+       <div class="tb11">
+         <div class="tb6">
+           
+            <center id="th"><b><i>Reference</i></b></center>
+             <div>
+              <div class="dt">
+                <label>Name</label>
+                <input type="text" id="refname" name="refname">
+                <span class="error-message" id="refnameError"></span>
+              </div>
+              <div clas="dt">
+                <label>Contact Number</label>
+                <input type="text" id="refcontact" name="refcontact">
+                <span class="error-message" id="refcontactError"></span>
+              </div>
+              <div class="dt">
+                <label>Relation</label>
+                 <input type="text" id="refrel" name="refrel">
+                 <span class="error-message" id="refrelError"></span>
+              </div>
+              </div>
+             
+        
+            
+          </div>
+          <div class="tb7">
+   
+                <center id="th"><b><i>Preference</i></b></center>
+                <div>
+                    <div class="dt">
+                        <label for="prefered location">Prefered location</label>
+                        <select name="prefloc" id="pref_location">
+                        <option value="ahmedabad">ahmedabad</option>
+                        <option value="rajkot">rajkot</option>
+                        <option value="vadodara">vadodara</option>
+                        <option value="jamnagar">jamnagar</option>
+                        <option value="surat">Surat</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div class="dt">
+                            <label>Notice Period</label>
+                            <input type="text" id="np" name="np">
+                        </div>
+                        <div class="dt">
+                            <label>Department</label>
+                            <select name="department" id="department">
+                                <option value="cse">cse</option>
+                                <option value="mech">mech</option>
+                                <option value="ec">ec</option>
+                                <option value="electrical">electrical</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <div class="dt">
+                            <label>expected_ctc</label>
+                            <input type="text" id="exp_ctc" name="exp_ctc">
+                        </div>
+                        <div class="dt">
+                            <label>current_ctc</label>
+                            <input type="text" id="current_ctc" name="current_ctc">
+                        </div>
+                    </div>
+                </div>
+           
+          </div>
+        </div>
+        <!-- <input type="text" id="empId" name="custId"> -->
+   
+       <input type="button" id="submit" value="Submit" onclick="submitForm()" />
+       <!-- <input type="button" value="update" onclick="updateForm()"/> -->
+       <button type="button" id="updateBtn" style="display: none;">Update</button>
+       <!-- <input type="button" value="check" onclick="checkCu()"> -->
+       </div>
+       </form>
+     </div>
+
+     
+     <script>
+   
+
+function showMessage(input, message) {
+        const errorElement = input.nextElementSibling;
+        errorElement.innerText = message;
+        errorElement.style.dispaly = "block";
+      }
+      function hideMessage(input) {
+        const errorElement = input.nextElementSibling;
+        errorElement.innerText = "";
+        errorElement.style.dispaly = "none";
+      }
+
+
+        let currentSectionIndex = 0;
+        const sections = document.querySelectorAll('.form-section');
+        showSection('basicDetails');
+        function showSection(sectionId) {
+            sections.forEach(section => {
+                 section.style.display = 'none';
+                // section.classList.remove("active");
+                // section.classlist.remove("active");
+                
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            document.getElementById(sectionId).classList.add("active");
+            // document.getElementById(sectionId).classlist.add("active")
+            currentSectionIndex = Array.from(sections).findIndex(section => section.id === sectionId);
+        }
+
+
+
+
+
+
+
+        function nextSection() {
+            // Validate the current section before moving to the next section
+            // if (!validateCurrentSection()) {
+            //     return; // If validation fails, do not proceed further
+            // }
+    
+            // Proceed to the next section
+            if (currentSectionIndex < sections.length - 1) {
+                currentSectionIndex++;
+                showSection(sections[currentSectionIndex].id);
+              document.getElementById(sections[currentSectionIndex-1].id).classList.remove("active");
+              //  let previous=document.getElementById(sections[currentSectionIndex-1].id).classList.remove("active");
+
+            }
+        }
+    
+        function previousSection() {
+
+          // if (!validateCurrentSection()) {
+          //       return; // If validation fails, do not proceed further
+          //   }
+            if (currentSectionIndex > 0) {
+                currentSectionIndex--;
+                showSection(sections[currentSectionIndex].id);
+                document.getElementById(sections[currentSectionIndex+1].id).classList.remove("active");
+
+            }
+        }
+
+
+
+
+
+        function validateCurrentSection() {
+          
+            const currentSection = document.querySelector('.form-section.active');
+            const currentSectionId = currentSection.id;
+            console.log(currentSectionId)
+    
+            // Validate the current section based on its ID
+            if (currentSectionId === 'basicDetails') {
+                return validateBasicDetails();
+            } else if (currentSectionId === 'educationDetails') {
+                return validateEducationDetails();
+            } else if (currentSectionId === 'workExperience') {
+                return validateWorkExperience();
+            }
+            else if(currentSectionId==='lang&tech'){
+              return validateLangtech();
+            }
+            else if(currentSectionId==='ref&pref'){
+              return validateRefPref();
+            }
+    
+            // Default to validation pass if section is not recognized
+            return true;
+        }
+
+
+
+
+   
+
+
+    // Function to fetch user data by ID and populate the form
+    // async function fetchUserDataById(userId) {
+    //     try {
+    //         // Fetch user data from server using /getdata endpoint
+    //         const response = await fetch(`/getdata?id=${userId}`);
+    //         const userData = await response.json();
+
+    //         // Populate form fields with fetched data
+    //         document.getElementById('fname').value = userData.basic_det[0].fname;
+    //         document.getElementById('lname').value = userData.basic_det[0].lname;
+    //         document.getElementById('desig').value = userData.basic_det[0].designation;
+    //         document.getElementById('add').value = userData.basic_det[0].address;
+    //         document.getElementById('email').value = userData.basic_det[0].email;
+    //         document.getElementById('pin').value = userData.basic_det[0].pincode;
+    //         document.getElementById('phone').value = userData.basic_det[0].phone;
+    //         document.getElementById('city').value = userData.basic_det[0].city;
+    //         document.querySelector(`input[name="gender"][value="${userData.basic_det[0].gender}"]`).checked = true;
+    //         document.getElementById('state').value = userData.basic_det[0].state;
+    //         document.getElementById('rel_status').value = userData.basic_det[0].relationshipstatus;
+    //         document.getElementById('dob').value = userData.basic_det[0].dob;
+
+    //         // Show the update button
+    //         document.getElementById('updateBtn').style.display = 'block';
+    //     } catch (error) {
+    //         console.error('Error:', error);
+    //         // Handle error
+    //     }
+    // }
+
+    // Extract user ID from the URL
+    // <!-- Your form -->
+// <form id="form">
+//     <!-- Form fields to be populated -->
+//     <input type="text" id="fname" name="fname" />
+//     <input type="text" id="lname" name="lname" />
+//     <!-- Other form fields -->
+    
+// </form>
+
+
+// Function to extract user ID from URL
+// function getUserIdFromUrl() {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     return urlParams.get('id');
+// }
+
+// // Fetch user data function
+// async function fetchUserData() {
+//     const userId = getUserIdFromUrl();
+
+//     try {
+//         const response = await fetch(`/getdata?id=${userId}`);
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+//         const userData = await response.json();
+//         return userData;
+//     } catch (error) {
+//         console.error('Error fetching user data:', error);
+//         throw error;
+//     }
+// }
+
+// // Populate form fields with fetched data
+// function populateForm(userData) {
+//     document.getElementById('fname').value = userData.basic_det[0].fname;
+//     document.getElementById('lname').value = userData.basic_det[0].lname;
+//     // Update other form fields similarly
+// }
+
+// // Enable update button if form fields are populated
+// function enableUpdateButton() {
+//     document.getElementById('updateBtn').disabled = false;
+// }
+
+// // Add event listener for update button click
+// document.getElementById('updateBtn').addEventListener('click', async function() {
+//     const userId = getUserIdFromUrl();
+//     const formData = new FormData(document.getElementById('form'));
+
+//     // Prepare data to send to the server
+//     const updatedData = {
+//         fname: formData.get('fname'),
+//         lname: formData.get('lname'),
+//         // Include other form fields similarly
+//     };
+
+//     try {
+//         const response = await fetch(`/updateData?id=${userId}`, {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(updatedData)
+//         });
+
+//         if (!response.ok) {
+//             throw new Error('Failed to update user data');
+//         }
+//         alert('User data updated successfully');
+//     } catch (error) {
+//         console.error('Error updating user data:', error);
+//         // Handle error
+//     }
+// });
+
+// // Fetch user data and populate form fields when the page loads
+// window.addEventListener('DOMContentLoaded', async function() {
+//     try {
+//         const userData = await fetchUserData();
+//         populateForm(userData);
+//         enableUpdateButton();
+//     } catch (error) {
+//         // Handle error
+//     }
+// // });
+// function getUserIdFromUrl() {
+//     const urlParams = new URLSearchParams(window.location.search);
+//     return urlParams.get('id');
+// }
+
+// // Fetch user data function
+// async function fetchUserData() {
+//     const userId = getUserIdFromUrl();
+
+//     try {
+//         const response = await fetch(`/getdata?id=${userId}`);
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+//         const userData = await response.json();
+//         return userData;
+//     } catch (error) {
+//         console.error('Error fetching user data:', error);
+//         throw error;
+//     }
+// }
+
+// // Populate form fields with fetched data
+// function populateForm(userData) {
+//     const basicDet = userData.basic_det[0];
+//     document.getElementById('fname').value = basicDet.f_name;
+//     document.getElementById('lname').value = basicDet.l_name;
+//     // Update other form fields similarly
+// }
+
+// // Enable update button if form fields are populated
+// function enableUpdateButton() {
+//     document.getElementById('updateBtn').disabled = false;
+// }
+
+// // Fetch user data and populate form fields when the page loads
+// window.addEventListener('DOMContentLoaded', async function() {
+//     try {
+//         const userData = await fetchUserData();
+//         populateForm(userData);
+//         enableUpdateButton();
+//     } catch (error) {
+//         // Handle error
+//     }
+// });
+// Function to populate form fields with user data
+// async function populateFormWithUserData() {
+//   try {
+//     // Make AJAX request to fetch user data with ID 5
+//     const response = await fetch('/getdata?id=5');
+//     const data = await response.json();
+
+//     // Assuming the response structure matches the expected format
+//     const basicDetails = data.basic_det[0];
+//     const eduDetails = data.edu_det[0];
+//     const workExp = data.work_exp[0];
+//     const langKnown = data.lang_know[0];
+//     const techKnown = data.tech_know[0];
+//     const reference = data.reference[0];
+//     const preference = data.preference[0];
+
+//     // Populate form fields with retrieved data
+//     document.getElementById("fname").value = basicDetails.f_name;
+//     document.getElementById("lname").value = basicDetails.l_name;
+//     document.getElementById("desig").value = basicDetails.desig;
+//     document.getElementById("add").value = basicDetails.add1;
+//     document.getElementById("email").value = basicDetails.email;
+//     document.getElementById("pin").value = basicDetails.pin;
+//     document.getElementById("phone").value = basicDetails.phone;
+//     document.getElementById("city").value = basicDetails.city;
+//     document.getElementById("state").value = basicDetails.state;
+//     document.getElementById("rel_status").value = basicDetails.rel_status;
+//     document.getElementById("dob").value = basicDetails.dob;
+
+//     // Populate other form fields similarly
+
+//   } catch (error) {
+//     console.error('Error fetching user data:', error);
+//   }
+// }
+
+// // Call populateFormWithUserData function when the page loads
+// document.addEventListener('DOMContentLoaded', populateFormWithUserData);
+async function populateFormWithUserData(id) {
+  try {
+    // Make AJAX request to fetch user data with the provided ID
+    const response = await fetch(`/getdata?id=${id}`);
+    const data = await response.json();
+
+    // Assuming the response structure matches the expected format
+    const basicDetails = data.basic_det[0];
+    const eduDetails = data.edu_det[0];
+    const workExp = data.work_exp[0];
+    const langKnown = data.lang_know[0];
+    const techKnown = data.tech_know[0];
+    const reference = data.reference[0];
+    const preference = data.preference[0];
+
+    // Populate form fields with retrieved data
+    document.getElementById("fname").value = basicDetails.f_name;
+    document.getElementById("lname").value = basicDetails.l_name;
+    document.getElementById("desig").value = basicDetails.desig;
+    document.getElementById("add").value = basicDetails.add1;
+    document.getElementById("email").value = basicDetails.email;
+    document.getElementById("pin").value = basicDetails.pin;
+    document.getElementById("phone").value = basicDetails.phone;
+    document.getElementById("city").value = basicDetails.city;
+    document.getElementById("state").value = basicDetails.state;
+    document.getElementById("rel_status").value = basicDetails.rel_status;
+    document.getElementById("dob").value = basicDetails.dob;
+    //  const eduDetails1 = data.edu_det[0];
+
+// Populate form fields with education details
+document.getElementById("sboard").value = eduDetails[0].ssc_board;
+document.getElementById("spy").value = eduDetails.ssc_passing_year;
+document.getElementById("sper").value = eduDetails.ssc_percentage;
+
+document.getElementById("hboard").value = eduDetails.hsc_board;
+document.getElementById("hpy").value = eduDetails.hsc_passing_year;
+document.getElementById("hper").value = eduDetails.hsc_percentage;
+
+document.getElementById("bc").value = eduDetails.bachelor_course;
+document.getElementById("bpy").value = eduDetails.bachelor_passing_year;
+document.getElementById("bper").value = eduDetails.bachelor_percentage;
+
+document.getElementById("mc").value = eduDetails.master_course;
+document.getElementById("mpy").value = eduDetails.master_passing_year;
+document.getElementById("mper").value = eduDetails.master_percentage;
+
+
+
+    // Populate other form fields similarly
+    document.getElementById('updateBtn').style.display = 'block';
+    document.getElementById('submit').style.display='none'
+
+  } catch (error) {
+    console.error('Error fetching user data:', error);
+  }
+}
+
+// Call populateFormWithUserData function when the page loads with a specific ID
+document.addEventListener('DOMContentLoaded', () => {
+  // Extract ID parameter from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get('id');
+
+  // If ID parameter is present, populate the form with data for that ID
+  if (id) {
+    populateFormWithUserData(id);
+  }
+});
+
+
+    
+
+    async function submitForm() {
+    const form = document.getElementById('form');
+    const formData = new FormData(form);
+    const serializedFormData = {};
+
+for (const [key, value] of formData.entries()) {
+  const fieldName = key.replace('[]', '');
+    if (!serializedFormData[fieldName]) {
+        serializedFormData[fieldName] = [];
+    }
+    serializedFormData[fieldName].push(value);
+}
+
+    try {
+        const response = await fetch('/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(serializedFormData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        // const data = await response.json();
+
+        // console.log('Form data sent successfully:', data);
+
+        // Optionally, you can handle the response here
+    } catch (error) {
+        console.error('There was a problem with your fetch operation:', error);
+    }
+}
+// async function updateForm(){
+//   const form = document.getElementById('form');
+//     const formData = new FormData(form);
+//     const serializedFormData1 = {};
+
+// for (const [key, value] of formData.entries()) {
+//   const fieldName = key.replace('[]', '');
+//     if (!serializedFormData1[fieldName]) {
+//         serializedFormData1[fieldName] = [];  
+//     }
+//     serializedFormData1[fieldName].push(value);
+
+//     try {
+//         const response = await fetch('/update', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//                 'Accept': 'application/json'
+//             },
+//             body: JSON.stringify(serializedFormData1)
+//         });
+
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok');
+//         }
+
+//         // const data = await response.json();
+
+//         // console.log('Form data sent successfully:', data);
+
+//         // Optionally, you can handle the response here
+//     } catch (error) {
+//         console.error('There was a problem with your fetch operation:', error);
+//     }
+// }
+// }
+
+
+
+const fnameInput = document.getElementById("fname");
+const lnameInput = document.getElementById("lname");
+const desigInput = document.getElementById("desig");
+const addInput = document.getElementById("add");
+const emailInput = document.getElementById("email");
+const pinInput = document.getElementById("pin");
+const phoneInput = document.getElementById("phone");
+const cityInput = document.getElementById("city");
+
+const femaleInput = document.getElementById("female");
+const stateInput = document.getElementById("state");
+const relInput = document.getElementById("rel_status");
+const dobInput = document.getElementById("dob");
+
+function validateBasicDetails() {
+    const fname = fnameInput.value.trim();
+    if (fname === "") {
+      showMessage(fnameInput, "Name is required");  
+      return false;
+    }
+    hideMessage(fnameInput);
+    const name1 = /^[a-zA-Z ]+$/;
+
+    if (!name1.test(fname)) {
+      showMessage(fnameInput, "please enter proper name");
+      return false;
+    }
+    hideMessage(fnameInput);
+
+
+
+    const lname = lnameInput.value.trim();
+        const name2 = /^[a-zA-Z ]+$/;
+
+        if (lname === "") {
+          showMessage(lnameInput, " Last Name is required");
+          return false;
+        }
+        hideMessage(lnameInput);
+
+        if (!name2.test(lname)) {
+          showMessage(lnameInput, "please enetr proper  Last name");
+          return false;
+        }
+        hideMessage(lnameInput);
+
+
+        const desig = desigInput.value.trim();
+
+        if (desig === "") {
+          showMessage(desigInput, " Please enter  designation");
+          return false;
+        }
+        hideMessage(desigInput);
+
+        
+        const add = addInput.value.trim();
+
+          if (add === "") {
+            showMessage(addInput, " Address is required");
+            return false;
+          }
+          hideMessage(addInput);
+
+
+
+
+
+
+        const email = emailInput.value.trim();
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+        if (!emailRegex.test(email)) {
+          showMessage(emailInput, "please enter proper email");
+          return false;
+        }
+        hideMessage(emailInput);
+
+
+
+
+          const pincode = pinInput.value.trim();
+        var pincode_regex = /^[1-9][0-9]{5}$/;
+
+        if (pincode === "") {
+          showMessage(pinInput, " please enter pincode ");
+          return false;
+        }
+        hideMessage(pinInput);
+        if (!pincode_regex.test(pincode)) {
+          showMessage(pinInput, "please enetr proper  pin");
+          return false;
+        }
+        hideMessage(pinInput);
+
+
+
+
+
+
+
+
+        const phone = phoneInput.value.trim();
+
+        const phoneRegex = /^[0-9]{10}$/;
+
+        if (phone === "") {
+          showMessage(phoneInput, "Phone no. is required required");
+          return false;
+        }
+
+        if (!phoneRegex.test(phone)) {
+          showMessage(phoneInput, "please enter proper phone no");
+          return false;
+        }
+        hideMessage(phoneInput);
+
+
+
+        const city = cityInput.value.trim();
+
+        if (city === "") {
+          showMessage(cityInput, "PLease enter City name");
+          return false;
+        }
+        hideMessage(cityInput);
+
+
+
+        var gender = document.getElementsByName("gender");
+        if (gender[0].checked == false && gender[1].checked == false) {
+          showMessage(femaleInput, "Please select one item");
+          return false;
+        }
+        hideMessage(femaleInput);
+
+
+
+        var select = document.getElementById("state");
+        if (!select.value) {
+          showMessage(stateInput, "Please select one state");
+          return false;
+        }
+        hideMessage(stateInput);
+
+
+
+        var rel = document.getElementById("rel_status");
+        if (!rel.value) {
+          showMessage(relInput, "Please select reletionship status");
+          return false;
+        }
+        hideMessage(relInput);
+
+
+
+        const dob = dobInput.value.trim();
+        if (dob === "") {
+          showMessage(dobInput, "Please enter dob");
+          return false;
+        }
+        hideMessage(dobInput);
+
+        return true;
+     }
+
+
+
+      const sscBoardInput=document.getElementById("sboard");
+      const sscYearInput=document.getElementById("spy");
+      const sscPerInput=document.getElementById("sper");
+
+      const hscBoardInput=document.getElementById("hboard");
+      const hscYearInput=document.getElementById("hpy");
+      const hscPerInput=document.getElementById("hper");
+
+      const bcBoardInput=document.getElementById("bc");
+      const bcYearInput=document.getElementById("bpy");
+      const bcPerInput=document.getElementById("bper");
+
+      const mcBoardInput=document.getElementById("mc");
+      const mcYearInput=document.getElementById("mpy");
+      const mcPerInput=document.getElementById("mper");
+
+    function validateEducationDetails() {
+      const anyInpute1=sscBoardInput.value.trim()!=='' || sscYearInput.value.trim()!=='' || sscPerInput.value.trim()!=='';
+        if(anyInpute1){
+          if(sscBoardInput.value.trim()==='' || sscYearInput.value.trim()==='' || sscPerInput.value.trim()===''){
+            showMessage(sscBoardInput,"Please fill all or nothing");
+            return false;
+          }
+        }else{
+          if(sscBoardInput.value.trim()!=='' || sscYearInput.value.trim()!=='' || sscPerInput.value.trim()!==''){
+            showMessage(sscBoardInput,"Please fill all or nothing");
+            return false;
+          }
+         
+        }
+        hideMessage(sscBoardInput);
+        return true;
+
+
+        const anyInpute2=hscBoardInput.value.trim()!=='' || hscYearInput.value.trim()!=='' || hscPerInput.value.trim()!=='';
+        if(anyInpute2){
+          if(hscBoardInput.value.trim()==='' || hscYearInput.value.trim()==='' || hscPerInput.value.trim()===''){
+            showMessage(hscBoardInput,"Please fill all or nothing");
+            return false;
+          }
+        }else{
+          if(hscBoardInput.value.trim()!=='' || hscYearInput.value.trim()!=='' || hscPerInput.value.trim()!==''){
+            showMessage(hscBoardInput,"Please fill all or nothing");
+            return false;
+          }
+         
+        }
+        hideMessage(hscBoardInput);
+
+
+        const anyInpute3=bcBoardInput.value.trim()!=='' || bcYearInput.value.trim()!=='' || bcPerInput.value.trim()!=='';
+        if(anyInpute3){
+          if(bcBoardInput.value.trim()==='' || bcYearInput.value.trim()==='' || bcPerInput.value.trim()===''){
+            showMessage(bcBoardInput,"Please fill all or nothing");
+            return false;
+          }
+        }else{
+          if(bcBoardInput.value.trim()!=='' || bcYearInput.value.trim()!=='' || bcPerInput.value.trim()!==''){
+            showMessage(bcBoardInput,"Please fill all or nothing");
+            return false;
+          }
+         
+        }
+        hideMessage(bcBoardInput);
+
+        const anyInpute4=mcBoardInput.value.trim()!=='' || mcYearInput.value.trim()!=='' || mcPerInput.value.trim()!=='';
+        if(anyInpute4){
+          if(mcBoardInput.value.trim()==='' || mcYearInput.value.trim()==='' || mcPerInput.value.trim()===''){
+            showMessage(mcBoardInput,"Please fill all or nothing");
+            return false;
+          }
+        }else{
+          if(mcBoardInput.value.trim()!=='' || mcYearInput.value.trim()!=='' || mcPerInput.value.trim()!==''){
+            showMessage(mcBoardInput,"Please fill all or nothing");
+            return false;
+          }
+         
+        }
+        hideMessage(mcBoardInput);
+}
+
+
+const comp1Input=document.getElementById("comp1");
+      const desig1Input=document.getElementById("desig1");
+      const fromdate1Input=document.getElementById("frm_date1");
+      const todate1Input=document.getElementById("to_date1");
+
+      const comp2Input=document.getElementById("comp2");
+      const desig2Input=document.getElementById("desig2");
+      const fromdate2Input=document.getElementById("frm_date2");
+      const todate2Input=document.getElementById("to_date2");
+
+      const comp3Input=document.getElementById("comp3");
+      const desig3Input=document.getElementById("desig3");
+      const fromdate3Input=document.getElementById("frm_date3");
+      const todate3Input=document.getElementById("to_date3");
+
+function validateWorkExperience(){
+       const anyInputw1=comp1Input.value.trim()!=='' || desig1Input.value.trim()!=='' || fromdate1Input.value.trim()!=='' || todate1Input.value.trim()!=='';
+        if(anyInputw1){
+          if(comp1Input.value.trim()==='' || desig1Input.value.trim()==='' || fromdate1Input.value.trim()==='' || todate1Input.value.trim()===''){
+            showMessage(comp1Input,"Please fill all or nothing");
+            return false;
+          }
+        }else{
+          if(comp1Input.value.trim()!=='' || desig1Input.value.trim()!=='' || fromdate1Input.value.trim()!=='' || todate1Input.value.trim()!==''){
+            showMessage(comp1Input,"Please fill all or nothing");
+            return false;
+          }
+         
+        }
+        hideMessage(comp1Input);
+
+        
+        const anyInputw2=comp2Input.value.trim()!=='' || desig2Input.value.trim()!=='' || fromdate2Input.value.trim()!=='' || todate2Input.value.trim()!=='' ;
+        console.log(anyInputw2)
+        if(anyInputw2){
+          if(comp2Input.value.trim()==='' || desig2Input.value.trim()==='' || fromdate2Input.value.trim()==='' || todate2Input.value.trim()===''){
+            showMessage(comp2Input,"Please fill all or nothing");
+            return false;
+          }
+        }else{
+          if(anyInputw2){  if(comp2Input.value.trim()!=='' || desig2Input.value.trim()!=='' || fromdate2Input.value.trim()!=='' || todate2Input.value.trim().value!==''){
+            showMessage(comp2Input,"Please fill all or nothing");
+            return false;
+          }}
+        
+         
+        }
+        hideMessage(comp2Input);
+
+
+
+        const anyInputw3=comp3Input.value.trim()!=='' || desig3Input.value.trim()!=='' || fromdate3Input.value.trim()!==''|| todate3Input.value.trim()!=='';
+        if(anyInputw3){
+          if(comp3Input.value.trim()==='' || desig3Input.value.trim()==='' || fromdate3Input.value.trim()==='' || todate3Input.value.trim()===''){
+            showMessage(comp3Input,"Please fill all or nothing");
+            return false;
+          }
+        }else{
+          if(comp3Input.value.trim()!=='' || desig3Input.value.trim()!=='' || fromdate3Input.value.trim()!=='' || todate3Input.value.trim()!==''){
+            showMessage(comp3Input,"Please fill all or nothing");
+            return false;
+          }
+         
+        }
+        hideMessage(comp3Input);
+
+  return true;
+}
+      
+      const hindiInput=document.getElementById("hindi");
+      const englishInput=document.getElementById("english");
+      const gujaratiInput=document.getElementById("gujarati");
+
+ 
+      const hindiRead=document.getElementById("read1");
+      const hindiWrite=document.getElementById("write1");
+      const hindiSpeak=document.getElementById("speak1");
+
+      const englishRead=document.getElementById("read2");
+      const englishWrite=document.getElementById("write2");
+      const englishSpeak=document.getElementById("speak2");
+
+      const gujaratiRead=document.getElementById("read3");
+      const gujaratiWrite=document.getElementById("write3");
+      const gujaratiSpeak=document.getElementById("speak3");
+
+      const phpInput=document.getElementById("php");
+      const oracleInput=document.getElementById("oracle");
+      const mysqlInput=document.getElementById("mysql");
+      const laravelInput=document.getElementById("laravel");
+
+
+
+      const phpBeginner=document.getElementById("b0");
+      const phpMediator=document.getElementById("m0");
+      const phpExpert=document.getElementById("e0");
+
+      const oracleBeginner=document.getElementById("b1");
+      const oracleMediator=document.getElementById("m1");
+      const oracleExpert=document.getElementById("e1");
+
+
+      const mysqlBeginner=document.getElementById("b2");
+      const mysqlMediator=document.getElementById("m2");
+      const mysqlExpert=document.getElementById("e2");
+
+
+      const laravelBeginner=document.getElementById("b3");
+      const laravelMediator=document.getElementById("m3");
+      const laravelExpert=document.getElementById("e3");
+  function validateLangtech(){
+  if(hindiInput.checked){
+          if(!(hindiRead.checked || hindiWrite.checked || hindiSpeak.checked)){
+            alert("please select atleast one option for hindi");
+            return false;
+          }
+        }
+        if(!englishInput.checked && (englishRead.checked || englishWrite.checked || englishSpeak.checked)){
+          alert("please select english and then select other option");
+          return false;
+        } 
+
+        if(englishInput.checked){
+          if(!(englishRead.checked || englishWrite.checked || englishSpeak.checked)){
+            alert("please select atleast one option for english");
+            return false;
+          }
+        }
+        if(!englishInput.checked && (englishRead.checked || englishWrite.checked || englishSpeak.checked)){
+          alert("please select english and then select other option");
+          return false;
+        } 
+
+        if(gujaratiInput.checked){
+          if(!(gujaratiRead.checked || gujaratiSpeak.checked || gujaratiWrite.checked)){
+            alert("please select atleast one option for gujarati");
+            return false;
+          }
+        }
+        if(!gujaratiInput.checked && (gujaratiRead.checked || gujaratiSpeak.checked || gujaratiWrite.checked)){
+          alert("please select gujarati and then select other option");
+          return false;
+        } 
+        if(phpInput.checked && !phpBeginner.checked && !phpMediator.checked && !phpExpert.checked){
+          alert("please select  php_level");
+          return false;
+        }
+        if(!phpInput.checked && (phpBeginner.checked || phpMediator.checked || phpExpert.checked)){
+          alert("please select technology first ");
+          return false;
+        }
+
+        if(oracleInput.checked && !oracleMediator.checked && !oracleExpert.checked && !oracleBeginner.checked){
+          alert("please select  oracle_level");
+          return false;
+        }
+        if(!oracleInput.checked && (oracleBeginner.checked || oracleMediator.checked || oracleExpert.checked)){
+          alert("please select technology first ");
+          return false;
+        }
+
+        if(mysqlInput.checked && !mysqlBeginner.checked && !mysqlExpert.checked && !mysqlMediator.checked){
+          alert("please select  Mysql_level");
+          return false;
+        }
+        if(!mysqlInput.checked && (mysqlBeginner.checked || mysqlExpert.checked || mysqlMediator.checked)){
+          alert("please select technology first ");
+          return false;
+        }
+
+        if(laravelInput.checked && !laravelBeginner.checked && !laravelMediator.checked && !laravelExpert.checked){
+          alert("please select  laravel_level");
+          return false;
+        }
+        if(!laravelInput.checked && (laravelBeginner.checked || laravelMediator.checked || laravelExpert.checked)){
+          alert("please select technology first ");
+          return false;
+        }
+        return true;
+
+
+}
+
+      const refNameInput=document.getElementById("refname");
+      const refContactInput=document.getElementById("refcontact");
+      const refrelInput=document.getElementById("refrel");
+
+      function validateRefPref(){
+        const refname = refNameInput.value.trim();
+        if (refname === "") {
+          showMessage(refNameInput, " ReferalName is required");  
+          return false;
+        }
+        hideMessage(refNameInput);
+        const refregex = /^[a-zA-Z ]+$/;
+
+        if (!refregex.test(refname)) {
+          showMessage(refNameInput, "please enter proper refname");
+          return false;
+        }
+        hideMessage(refNameInput);
+
+        const refRel = refrelInput.value.trim();
+        if (refRel === "") {
+          showMessage(refrelInput, " ref relation is required");  
+          return false;
+        }
+        hideMessage(refrelInput);
+        const refRelregex = /^[a-zA-Z ]+$/;
+
+        if (!refRelregex.test(refRel)) {
+          showMessage(refContactInput, "please enter proper name");
+          return false;
+        }
+         hideMessage(refContactInput);
+
+
+      }
+
+
+     </script>
+    
+</body>
+</html>
